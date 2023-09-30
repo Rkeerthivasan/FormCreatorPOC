@@ -90,18 +90,7 @@ private isDragEnter: boolean = false;
     horizontalGridlines: { lineColor: '#e0e0e0', lineIntervals: this.interval },
     verticalGridlines: { lineColor: '#e0e0e0', lineIntervals: this.interval }
   };
-  public nodes: NodeModel[] = [{
-      id: "button",
-      borderColor: 'black',
-      borderWidth: 1,
-      width:100,
-      height:100,
-offsetX:100,
-offsetY:100,
-      shape: {
-          type: 'HTML',
-      }
-    }];
+
   public collectionChangeEvent(args: ICollectionChangeEventArgs): void 
   {
   if(this.isDragEnter && args.type==='Addition' && args.state==='Changing')
