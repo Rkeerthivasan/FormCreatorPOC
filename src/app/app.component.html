@@ -94,11 +94,11 @@
     </div>
     <div id="diagram-space" class="sb-mobile-diagram">
         <div class="content-wrapper">
-            <ejs-diagram #diagram id="diagram" [nodes]='nodes' (collectionChange)="collectionChangeEvent($event)" width="100%" (drop)="drop($event)" height="700px" [snapSettings]='snapSettings' (created)="created()" [getConnectorDefaults]='connDefaults' [getNodeDefaults]='nodeDefaults' (dragEnter)="dragEnter($event)" (created)="diagramCreate($event)" (selectionChange)="selectionChange($event)" (historyChange)="historyChange($event)" [drawingObject] ="drawingObject">
+            <ejs-diagram #diagram id="diagram"  (collectionChange)="collectionChangeEvent($event)" width="100%" (drop)="drop($event)" height="700px" [snapSettings]='snapSettings' (created)="created()" [getConnectorDefaults]='connDefaults' [getNodeDefaults]='nodeDefaults' (dragEnter)="dragEnter($event)" (created)="diagramCreate($event)" (selectionChange)="selectionChange($event)" (historyChange)="historyChange($event)" [drawingObject] ="drawingObject">
               <ng-template #nodeTemplate let-data="$implicit">
                 
                 <ng-container *ngIf="data.id.indexOf('button')!==-1" >
-                  <button style="height:100%;width:100%;" ejs-button>Submit12</button>
+                  <input style="height:100%;width:100%;" type="button" value="Submit"/>
                 </ng-container>
                 <ng-container *ngIf="data.id.indexOf('textbox')!==-1">
                   <input style="height:100%;width:100%;" type="textbox" [value]="textBoxvalue(data)" (change)="onChangeText($event)" >
